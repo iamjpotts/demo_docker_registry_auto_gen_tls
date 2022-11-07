@@ -25,7 +25,7 @@ rand = "0.8"
 rcgen = { git = "https://github.com/iamjpotts/rcgen.git", branch = "20221006-parse-san-ip-address", features = ["pem", "x509-parser"] }
 passivized_docker_engine_client = "0.0.4"
 passivized_htpasswd = "0.0.2"
-passivized_test_support = "0.0.4"
+passivized_test_support = "0.0.6"
 pem = "1.1"
 tar = "0.4"
 tempfile = "3.3"
