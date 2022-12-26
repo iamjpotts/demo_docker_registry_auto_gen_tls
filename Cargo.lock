@@ -905,9 +905,9 @@ dependencies = [
 
 [[package]]
 name = "passivized_docker_engine_client"
-version = "0.0.5"
+version = "0.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "593499962047ecb2f693661f60ff005908908fb076d004b579f1760fcf62f24e"
+checksum = "536baa94259f22025595523d13b9507a3c3ca9daed8d349bed88cb053e1703a5"
 dependencies = [
  "base64",
  "byteorder",
@@ -920,6 +920,7 @@ dependencies = [
  "serde",
  "serde_json",
  "thiserror",
+ "time",
  "tokio",
  "url",
 ]
