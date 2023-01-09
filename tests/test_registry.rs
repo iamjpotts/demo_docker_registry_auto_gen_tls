@@ -3,6 +3,8 @@ mod test_utils;
 
 use std::io::Read;
 use std::net::Ipv4Addr;
+use std::time::Duration;
+use backoff::backoff::Constant;
 
 use http::StatusCode;
 use native_tls::{Certificate, Identity, TlsConnector};
@@ -15,7 +17,8 @@ use passivized_docker_engine_client::requests::{CreateContainerRequest, CreateNe
 use passivized_htpasswd::Algo::BcryptMinCost;
 use passivized_htpasswd::Htpasswd;
 use passivized_test_support::http_status_tests::{equals, is_success};
-use passivized_test_support::waiter::{wait_for_https_server, wait_for_tcp_server};
+use passivized_test_support::retry::Limit;
+use passivized_test_support::waiter::{wait_for_https_server, wait_for_tcp_server_with_backoff};
 use tar::Archive;
 use tempfile::tempdir;
 
@@ -245,7 +248,7 @@ async fn test_push_to_authenticated_registry() {
 
     println!("dind url: {dind_url}");
 
-    wait_for_tcp_server(&dind_ip, dind::PORT)
+    wait_for_tcp_server_with_backoff(&dind_ip, dind::PORT, build_dind_backoff())
         .await
         .unwrap();
 
@@ -422,4 +425,10 @@ async fn test_push_to_authenticated_registry() {
     public.network(NETWORK_NAME).remove()
         .await
         .unwrap();
+}
+
+fn build_dind_backoff() -> Limit {
+    let interval = Duration::from_secs(4);
+
+    Limit::new(5, Constant::new(interval))
 }
