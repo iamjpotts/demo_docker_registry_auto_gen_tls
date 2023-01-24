@@ -939,9 +939,9 @@ dependencies = [
 
 [[package]]
 name = "passivized_test_support"
-version = "0.0.7"
+version = "0.0.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "15d2b7ab15d587437bfef6b72ecc0f04a199ae8eaba1a7b4481b67ba0a65ed70"
+checksum = "3f98fcf145eef5e54253b4f9dabbed2749b9409e4b751f22b286165f1c923e5a"
 dependencies = [
  "backoff",
  "http",
