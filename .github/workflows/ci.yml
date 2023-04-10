@@ -13,7 +13,7 @@ jobs:
         os:
           - ubuntu-20.04
         toolchain:
-          - 1.64
+          - 1.68
           - stable
     runs-on: ${{ matrix.os }}
     steps:
@@ -24,5 +24,5 @@ jobs:
       - run: docker version
       - run: cargo test --no-run
       - run: cargo test --no-fail-fast
-    timeout-minutes: 30
+    timeout-minutes: 20
 
