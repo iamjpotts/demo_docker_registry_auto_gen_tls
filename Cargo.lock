@@ -279,7 +279,7 @@ dependencies = [
  "tempfile",
  "thiserror",
  "tokio",
- "x509-parser",
+ "x509-parser 0.15.0",
 ]
 
 [[package]]
@@ -1091,7 +1091,7 @@ dependencies = [
  "pem",
  "ring",
  "time",
- "x509-parser",
+ "x509-parser 0.14.0",
  "yasna",
 ]
 
@@ -1785,6 +1785,23 @@ dependencies = [
  "nom",
  "oid-registry",
  "ring",
+ "rusticata-macros",
+ "thiserror",
+ "time",
+]
+
+[[package]]
+name = "x509-parser"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bab0c2f54ae1d92f4fcb99c0b7ccf0b1e3451cbd395e5f115ccbdbcb18d4f634"
+dependencies = [
+ "asn1-rs",
+ "data-encoding",
+ "der-parser",
+ "lazy_static",
+ "nom",
+ "oid-registry",
  "rusticata-macros",
  "thiserror",
  "time",

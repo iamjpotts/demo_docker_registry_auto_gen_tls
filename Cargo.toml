@@ -31,4 +31,4 @@ tar = "0.4"
 tempfile = "3.4"
 thiserror = "1.0"
 tokio = { version = "1.26", features = ["fs", "macros", "rt-multi-thread"] }
-x509-parser = "0.14"
+x509-parser = "0.15"
