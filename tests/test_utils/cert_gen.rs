@@ -95,7 +95,7 @@ mod tests {
         let parsed_host_pem = pem::parse(&host_cert.signed_certificate_pem)
             .unwrap();
 
-        let parsed_host_der = parsed_host_pem.contents;
+        let parsed_host_der = parsed_host_pem.contents();
         let parsed_host_der_bytes = parsed_host_der.as_bytes();
 
         let (_, parsed_host_x509) = x509_parser::parse_x509_certificate(parsed_host_der_bytes)
