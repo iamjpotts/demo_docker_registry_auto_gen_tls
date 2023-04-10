@@ -271,7 +271,7 @@ dependencies = [
  "passivized_docker_engine_client",
  "passivized_htpasswd",
  "passivized_test_support",
- "pem",
+ "pem 2.0.1",
  "pipe",
  "rand",
  "rcgen",
@@ -961,6 +961,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "pem"
+version = "2.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6b13fe415cdf3c8e44518e18a7c95a13431d9bdf6d15367d82b23c377fdd441a"
+dependencies = [
+ "base64 0.21.0",
+ "serde",
+]
+
+[[package]]
 name = "percent-encoding"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1088,7 +1098,7 @@ name = "rcgen"
 version = "0.10.0"
 source = "git+https://github.com/iamjpotts/rcgen.git?branch=20221006-parse-san-ip-address#fa0a2c0c16fe7b2d6301e6453d68084da8d591cf"
 dependencies = [
- "pem",
+ "pem 1.1.1",
  "ring",
  "time",
  "x509-parser",
