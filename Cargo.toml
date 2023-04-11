@@ -8,7 +8,7 @@ include = [
 license-file = "LICENSE.txt"
 name = "demo_docker_registry_auto_gen_tls"
 rust-version = "1.68"
-version = "0.0.2"
+version = "0.0.3-alpha"
 
 [dependencies]
 
