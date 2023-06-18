@@ -271,7 +271,7 @@ dependencies = [
  "passivized_docker_engine_client",
  "passivized_htpasswd",
  "passivized_test_support",
- "pem 2.0.1",
+ "pem",
  "pipe",
  "rand",
  "rcgen",
@@ -279,7 +279,7 @@ dependencies = [
  "tempfile",
  "thiserror",
  "tokio",
- "x509-parser",
+ "x509-parser 0.14.0",
 ]
 
 [[package]]
@@ -966,15 +966,6 @@ dependencies = [
 
 [[package]]
 name = "pem"
-version = "1.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8835c273a76a90455d7344889b0964598e3316e2a79ede8e36f16bdcf2228b8"
-dependencies = [
- "base64 0.13.1",
-]
-
-[[package]]
-name = "pem"
 version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6b13fe415cdf3c8e44518e18a7c95a13431d9bdf6d15367d82b23c377fdd441a"
@@ -1108,13 +1099,14 @@ dependencies = [
 
 [[package]]
 name = "rcgen"
-version = "0.10.0"
-source = "git+https://github.com/iamjpotts/rcgen.git?branch=20221006-parse-san-ip-address#fa0a2c0c16fe7b2d6301e6453d68084da8d591cf"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4954fbc00dcd4d8282c987710e50ba513d351400dbdd00e803a05172a90d8976"
 dependencies = [
- "pem 1.1.1",
+ "pem",
  "ring",
  "time",
- "x509-parser",
+ "x509-parser 0.15.0",
  "yasna",
 ]
 
@@ -1843,6 +1835,23 @@ checksum = "e0ecbeb7b67ce215e40e3cc7f2ff902f94a223acf44995934763467e7b1febc8"
 dependencies = [
  "asn1-rs",
  "base64 0.13.1",
+ "data-encoding",
+ "der-parser",
+ "lazy_static",
+ "nom",
+ "oid-registry",
+ "rusticata-macros",
+ "thiserror",
+ "time",
+]
+
+[[package]]
+name = "x509-parser"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bab0c2f54ae1d92f4fcb99c0b7ccf0b1e3451cbd395e5f115ccbdbcb18d4f634"
+dependencies = [
+ "asn1-rs",
  "data-encoding",
  "der-parser",
  "lazy_static",
