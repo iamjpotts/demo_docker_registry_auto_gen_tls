@@ -1,5 +1,5 @@
 use std::net::IpAddr;
-use rcgen::{BasicConstraints, CertificateSigningRequest, DnType, IsCa, SanType, ExtendedKeyUsagePurpose, KeyUsagePurpose, DistinguishedName, CertificateParams, Certificate};
+use rcgen::{BasicConstraints, CertificateSigningRequest, DnType, IsCa, SanType, KeyUsagePurpose, DistinguishedName, CertificateParams, Certificate};
 
 pub struct ServerCertificate {
     pub private_key_pem: String,
@@ -35,7 +35,9 @@ pub fn gen_cert_for_server(ca: &Certificate, ip: IpAddr) -> ServerCertificate {
     params.alg = &rcgen::PKCS_ECDSA_P256_SHA256;
     params.distinguished_name = dn;
     params.subject_alt_names = vec![SanType::IpAddress(ip)];
-    params.extended_key_usages = vec![ExtendedKeyUsagePurpose::ServerAuth];
+
+    // Unsupported by rcgen 0.11.x; results in RcgenError::UnsupportedInCsr
+    //params.extended_key_usages = vec![ExtendedKeyUsagePurpose::ServerAuth];
 
     let unsigned = Certificate::from_params(params)
         .unwrap();
