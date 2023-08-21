@@ -307,7 +307,7 @@ dependencies = [
  "passivized_docker_engine_client",
  "passivized_htpasswd",
  "passivized_test_support",
- "pem",
+ "pem 3.0.1",
  "pipe",
  "rand",
  "rcgen",
@@ -1015,6 +1015,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "pem"
+version = "3.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ed3127afbfc30b4cad60c34aeb741fb562a808642b81142bcf4afb73142da960"
+dependencies = [
+ "base64 0.21.0",
+ "serde",
+]
+
+[[package]]
 name = "percent-encoding"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1143,7 +1153,7 @@ version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4954fbc00dcd4d8282c987710e50ba513d351400dbdd00e803a05172a90d8976"
 dependencies = [
- "pem",
+ "pem 2.0.1",
  "ring",
  "time",
  "x509-parser 0.15.0",
