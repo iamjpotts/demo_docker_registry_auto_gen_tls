@@ -116,13 +116,14 @@ checksum = "a4a4ddaa51a5bc52a6948f74c06d20aaaddb71924eab79b8c97a8c556e942d6a"
 
 [[package]]
 name = "bcrypt"
-version = "0.13.0"
+version = "0.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7e7c93a3fb23b2fdde989b2c9ec4dd153063ec81f408507f84c090cd91c6641"
+checksum = "28d1c9c15093eb224f0baa400f38fcd713fc1391a6f1c389d886beef146d60a3"
 dependencies = [
- "base64 0.13.1",
+ "base64 0.21.0",
  "blowfish 0.9.1",
  "getrandom",
+ "subtle",
  "zeroize",
 ]
 
@@ -976,9 +977,9 @@ dependencies = [
 
 [[package]]
 name = "passivized_htpasswd"
-version = "0.0.3"
+version = "0.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8bf312165090ab47025a0fe3cd17c8e43df6e2566362fa2c078eaf42fc67864a"
+checksum = "addd19226c38b9199ea75034ac8a5f887e2c1958875668015c85dd0fcf306668"
 dependencies = [
  "bcrypt",
  "indexmap",
