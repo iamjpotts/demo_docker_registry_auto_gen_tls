@@ -23,7 +23,7 @@ openssl = "0.10"
 pipe = { version = "0.4", features = ["bidirectional"] }
 rand = "0.8"
 rcgen = { version = "0.11.1", features = ["pem", "x509-parser"] }
-passivized_docker_engine_client = "0.0.7"
+passivized_docker_engine_client = "0.0.8"
 passivized_htpasswd = "0.0.5"
 passivized_test_support = "0.0.10"
 pem = "3.0"
