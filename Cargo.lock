@@ -993,9 +993,9 @@ dependencies = [
 
 [[package]]
 name = "passivized_docker_engine_client"
-version = "0.0.8"
+version = "0.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "df4c781fff50d7e833a4851a00026edaf6b696775fb559f301022ac66906b6e3"
+checksum = "99211981fef1a5b34cd762b076c55a6daffb7463b85690831155b750830e4ea2"
 dependencies = [
  "base64 0.21.0",
  "byteorder",
