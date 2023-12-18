@@ -14,7 +14,7 @@ version = "0.0.3-alpha"
 
 [dev-dependencies]
 backoff = { version = "0.4", features = ["futures", "tokio"] }
-http = "0.2"
+http = "1.0"
 hyper = { version = "1.0", features = ["client", "http1"] }
 hyper-tls = "0.6"
 log = "0.4"

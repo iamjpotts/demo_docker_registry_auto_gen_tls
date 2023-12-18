@@ -302,7 +302,7 @@ name = "demo_docker_registry_auto_gen_tls"
 version = "0.0.3-alpha"
 dependencies = [
  "backoff",
- "http 0.2.9",
+ "http 1.0.0",
  "hyper 1.0.1",
  "hyper-tls 0.6.0",
  "log",
@@ -552,7 +552,7 @@ dependencies = [
  "futures-core",
  "futures-sink",
  "futures-util",
- "http 0.2.9",
+ "http 0.2.11",
  "indexmap",
  "slab",
  "tokio",
@@ -602,9 +602,9 @@ dependencies = [
 
 [[package]]
 name = "http"
-version = "0.2.9"
+version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bd6effc99afb63425aff9b05836f029929e345a6148a14b7ecd5ab67af944482"
+checksum = "8947b1a6fad4393052c7ba1f4cd97bed3e953a95c79c92ad9b051a04611d9fbb"
 dependencies = [
  "bytes",
  "fnv",
@@ -629,7 +629,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d5f38f16d184e36f2408a55281cd658ecbd3ca05cce6d6510a176eca393e26d1"
 dependencies = [
  "bytes",
- "http 0.2.9",
+ "http 0.2.11",
  "pin-project-lite",
 ]
 
@@ -679,7 +679,7 @@ dependencies = [
  "futures-core",
  "futures-util",
  "h2",
- "http 0.2.9",
+ "http 0.2.11",
  "http-body 0.4.5",
  "httparse",
  "httpdate",
@@ -1084,7 +1084,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7bba2aeb6512c52d151b24126dc1ca701ad1b44b8accf8f7fccf9aa4fbaa3920"
 dependencies = [
  "backoff",
- "http 0.2.9",
+ "http 0.2.11",
  "hyper 0.14.27",
  "hyper-tls 0.5.0",
  "log",
