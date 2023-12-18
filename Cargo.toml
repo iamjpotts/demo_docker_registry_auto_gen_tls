@@ -22,7 +22,7 @@ native-tls = "0.2"
 openssl = "0.10"
 pipe = { version = "0.4", features = ["bidirectional"] }
 rand = "0.8"
-rcgen = { version = "0.11.3", features = ["pem", "x509-parser"] }
+rcgen = { version = "0.12.0", features = ["pem", "x509-parser"] }
 passivized_docker_engine_client = "0.0.9"
 passivized_htpasswd = "0.0.5"
 passivized_test_support = "0.0.10"
