@@ -28,7 +28,7 @@ passivized_htpasswd = "0.0.5"
 passivized_test_support = "0.0.10"
 pem = "3.0"
 tar = "0.4"
-tempfile = "3.8"
+tempfile = "3.9"
 thiserror = "1.0"
 tokio = { version = "1.35", features = ["fs", "macros", "rt-multi-thread"] }
 x509-parser = "0.14"
