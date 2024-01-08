@@ -309,7 +309,7 @@ async fn test_push_to_authenticated_registry() {
         .build()
         .unwrap();
 
-    wait_for_https_server(dind_url, tls.clone(), equals(StatusCode::NOT_FOUND))
+    wait_for_https_server(dind_url, tls.clone(), equals(hyper::StatusCode::NOT_FOUND))
         .await
         .unwrap();
 
