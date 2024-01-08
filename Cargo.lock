@@ -556,6 +556,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "h2"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e1d308f63daf4181410c242d34c11f928dcb3aa105852019e043c9d1f4e4368a"
+dependencies = [
+ "bytes",
+ "fnv",
+ "futures-core",
+ "futures-sink",
+ "futures-util",
+ "http 1.0.0",
+ "indexmap 2.1.0",
+ "slab",
+ "tokio",
+ "tokio-util",
+ "tracing",
+]
+
+[[package]]
 name = "hashbrown"
 version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -679,7 +698,7 @@ dependencies = [
  "futures-channel",
  "futures-core",
  "futures-util",
- "h2",
+ "h2 0.3.20",
  "http 0.2.9",
  "http-body 0.4.5",
  "httparse",
@@ -702,6 +721,7 @@ dependencies = [
  "bytes",
  "futures-channel",
  "futures-util",
+ "h2 0.4.0",
  "http 1.0.0",
  "http-body 1.0.0",
  "httparse",
@@ -1090,14 +1110,16 @@ dependencies = [
 
 [[package]]
 name = "passivized_test_support"
-version = "0.0.10"
+version = "0.0.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7bba2aeb6512c52d151b24126dc1ca701ad1b44b8accf8f7fccf9aa4fbaa3920"
+checksum = "4a1cf812d84e1e88369a3392de21eb2dbe682234e4a2df3ec53b6f2657e2b349"
 dependencies = [
  "backoff",
- "http 0.2.9",
- "hyper 0.14.27",
- "hyper-tls 0.5.0",
+ "http 1.0.0",
+ "http-body-util",
+ "hyper 1.1.0",
+ "hyper-tls 0.6.0",
+ "hyper-util",
  "log",
  "native-tls",
  "simple_logger",
